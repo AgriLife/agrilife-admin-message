@@ -45,11 +45,15 @@ function aam_show_message(){
 	    $message = str_replace('{user_email}', $current_user->user_email, $message);
     }
 
-	  ?>
-	  <div class="notice notice-warning">
-	      <p><?php echo $message; ?></p>
-	  </div>
-	  <?php
+    if( !empty( $message ) ){
+
+		  ?>
+		  <div class="notice notice-warning">
+		      <p><?php echo $message; ?></p>
+		  </div>
+		  <?php
+
+    }
 
 	}
 }
